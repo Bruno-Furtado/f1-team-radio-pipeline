@@ -1,0 +1,23 @@
+[
+	{ "name": "gcs_uri", "type": "STRING", "mode": "REQUIRED", "description": "Joins back to openf1_team_radios.gcs_uri" },
+	{ "name": "model", "type": "STRING", "description": "Gemini model used (primary or fallback)" },
+	{ "name": "processed_at", "type": "TIMESTAMP", "mode": "REQUIRED" },
+	{ "name": "sentiment_score", "type": "FLOAT64", "description": "-1.0 to 1.0" },
+	{ "name": "sentiment_label", "type": "STRING", "description": "positive / neutral / negative" },
+	{ "name": "emotion", "type": "STRING", "description": "calm / focused / frustrated / angry / excited / disappointed" },
+	{ "name": "is_complaint", "type": "BOOL" },
+	{ "name": "complaint_target", "type": "STRING", "description": "car / tyres / strategy / weather / other_driver / team / none" },
+	{ "name": "is_positive_outcome", "type": "BOOL", "description": "Driver celebrating overtake, undercut, pole, etc." },
+	{ "name": "topic", "type": "STRING", "description": "pace / tyres / strategy / weather / incident / position / fuel / brakes / engine / communication / other" },
+	{ "name": "summary", "type": "STRING", "description": "1-2 sentences in English" },
+	{ "name": "language_detected", "type": "STRING", "description": "ISO 639-1 of the original audio" },
+	{
+		"name": "transcription", "type": "RECORD", "mode": "REPEATED", "description": "Time-aligned segments",
+		"fields": [
+			{ "name": "start_time", "type": "STRING", "description": "MM:SS" },
+			{ "name": "start_time_seconds", "type": "FLOAT64" },
+			{ "name": "speaker", "type": "STRING", "description": "driver / engineer / unknown" },
+			{ "name": "text", "type": "STRING" }
+		]
+	}
+]

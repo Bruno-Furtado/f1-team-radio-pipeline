@@ -1,0 +1,20 @@
+[
+	{ "name": "meeting_key", "type": "INT64", "mode": "REQUIRED", "description": "OpenF1 unique meeting (Grand Prix) identifier" },
+	{ "name": "meeting_name", "type": "STRING", "description": "Short name of the GP" },
+	{ "name": "meeting_official_name", "type": "STRING", "description": "Official name of the GP" },
+	{ "name": "location", "type": "STRING", "description": "City of the circuit" },
+	{ "name": "country_key", "type": "INT64" },
+	{ "name": "country_code", "type": "STRING", "description": "3-letter country code" },
+	{ "name": "country_name", "type": "STRING" },
+	{ "name": "country_flag", "type": "STRING" },
+	{ "name": "circuit_key", "type": "INT64" },
+	{ "name": "circuit_short_name", "type": "STRING" },
+	{ "name": "circuit_type", "type": "STRING", "description": "Permanent / Temporary" },
+	{ "name": "circuit_info_url", "type": "STRING" },
+	{ "name": "circuit_image", "type": "STRING" },
+	{ "name": "gmt_offset", "type": "STRING" },
+	{ "name": "date_start", "type": "TIMESTAMP" },
+	{ "name": "date_end", "type": "TIMESTAMP" },
+	{ "name": "year", "type": "INT64" },
+	{ "name": "is_cancelled", "type": "BOOL" }
+]

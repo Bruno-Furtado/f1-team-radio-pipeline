@@ -1,0 +1,14 @@
+[
+	{ "name": "meeting_key", "type": "INT64", "mode": "REQUIRED" },
+	{ "name": "session_key", "type": "INT64", "mode": "REQUIRED" },
+	{ "name": "driver_number", "type": "INT64", "mode": "REQUIRED" },
+	{ "name": "broadcast_name", "type": "STRING", "description": "Name as shown in broadcast (e.g. M VERSTAPPEN)" },
+	{ "name": "full_name", "type": "STRING" },
+	{ "name": "name_acronym", "type": "STRING", "description": "3-letter driver code (VER, HAM, NOR)" },
+	{ "name": "team_name", "type": "STRING" },
+	{ "name": "team_colour", "type": "STRING", "description": "Hex color without #" },
+	{ "name": "first_name", "type": "STRING" },
+	{ "name": "last_name", "type": "STRING" },
+	{ "name": "headshot_url", "type": "STRING" },
+	{ "name": "country_code", "type": "STRING" }
+]

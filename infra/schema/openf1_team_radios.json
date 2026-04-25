@@ -1,0 +1,9 @@
+[
+	{ "name": "date", "type": "TIMESTAMP", "mode": "REQUIRED", "description": "Time of the radio communication" },
+	{ "name": "driver_number", "type": "INT64", "mode": "REQUIRED" },
+	{ "name": "meeting_key", "type": "INT64", "mode": "REQUIRED" },
+	{ "name": "session_key", "type": "INT64", "mode": "REQUIRED" },
+	{ "name": "recording_url", "type": "STRING", "description": "Original MP3 URL on livetiming.formula1.com" },
+	{ "name": "gcs_uri", "type": "STRING", "mode": "REQUIRED", "description": "gs:// URI of the audio uploaded to our bucket" },
+	{ "name": "inserted_at", "type": "TIMESTAMP", "mode": "REQUIRED" }
+]

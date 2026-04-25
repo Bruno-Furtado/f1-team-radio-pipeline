@@ -1,0 +1,17 @@
+[
+	{ "name": "session_key", "type": "INT64", "mode": "REQUIRED", "description": "OpenF1 unique session identifier" },
+	{ "name": "session_type", "type": "STRING", "description": "Practice / Qualifying / Race / Sprint / Sprint Qualifying" },
+	{ "name": "session_name", "type": "STRING", "description": "Practice 1, Sprint, Race, etc." },
+	{ "name": "date_start", "type": "TIMESTAMP" },
+	{ "name": "date_end", "type": "TIMESTAMP" },
+	{ "name": "meeting_key", "type": "INT64", "mode": "REQUIRED" },
+	{ "name": "circuit_key", "type": "INT64" },
+	{ "name": "circuit_short_name", "type": "STRING" },
+	{ "name": "country_key", "type": "INT64" },
+	{ "name": "country_code", "type": "STRING" },
+	{ "name": "country_name", "type": "STRING" },
+	{ "name": "location", "type": "STRING" },
+	{ "name": "gmt_offset", "type": "STRING" },
+	{ "name": "year", "type": "INT64" },
+	{ "name": "is_cancelled", "type": "BOOL" }
+]
