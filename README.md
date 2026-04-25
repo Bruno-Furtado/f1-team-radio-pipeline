@@ -69,7 +69,7 @@ gcloud functions list --gen2 --regions=us-central1
 
 ## 4. Run the collector
 
-Downloads metadata for meetings/sessions/drivers, discovers new team radios from sessions in the last 7 days, and uploads the MP3s to GCS.
+Downloads metadata for meetings/sessions/drivers, discovers new team radios from sessions, and uploads the MP3s to GCS.
 
 Prerequisites (one-time per shell):
 
