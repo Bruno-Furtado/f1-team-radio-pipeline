@@ -18,7 +18,7 @@ Repository demonstrating how to use GCP to transcribe F1 team radio calls and ex
 - Google Cloud account with billing enabled
 - `gcloud` CLI installed (`gcloud --version`)
 - `bq` CLI (ships with `gcloud`)
-- Project permissions: `roles/owner` or (IAM Admin + CF Admin + BQ Admin + Storage Admin + Service Usage Admin)
+- Project permissions: `roles/owner` or (IAM Adm, CF Adm, BQ Adm, Storage Adm, Service Usage Adm)
 - Python 3.13
 
 ## 2. Initial setup (one-time, ~5 minutes)
