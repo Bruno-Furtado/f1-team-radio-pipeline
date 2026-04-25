@@ -36,7 +36,7 @@ What `infra/setup.sh` does (idempotent):
 
 - Enables APIs: Cloud Functions, Cloud Build, BigQuery, Vertex AI, Storage, Cloud Run
 - Creates the private bucket `gs://${PROJECT_ID}-files` (uniform access + public access prevention)
-- Grants the SA the roles `storage.objectAdmin`, `bigquery.dataEditor`, `bigquery.jobUser`, `aiplatform.user`
+- Grants the roles `storage.objectAdmin`, `bigquery.dataEditor`, `bigquery.jobUser`, `aiplatform.user`
 - Creates the `raw` and `mart` datasets
 - Creates 5 tables in `raw` from the schemas in `infra/schema/`
 - Creates the `mart.f1_radio_enriched` view
