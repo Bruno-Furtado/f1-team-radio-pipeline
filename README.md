@@ -99,7 +99,7 @@ bash invoke.sh analyzer
 
 ## 6. Tools
 
-Auxiliary scripts that run on top of the processed data live in [`tools/`](tools/), outside of the Cloud Functions. Currently the only one is `export_dashboard_data.py`, which reads `mart.f1_radio_enriched` and emits a normalized JSON consumed by the dashboard at https://brunofurtado.dev/projects/f1-team-radio.
+Auxiliary scripts that run on top of the processed data live in [`tools/`](tools/) which reads `mart.f1_radio_enriched` and emits a normalized JSON consumed by the dashboard at https://brunofurtado.dev/projects/f1-team-radio.
 
 ```bash
 export PROJECT_ID=f1-team-radio
