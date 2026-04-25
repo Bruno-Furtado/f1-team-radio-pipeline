@@ -41,13 +41,6 @@ What `infra/setup.sh` does (idempotent):
 - Creates 5 tables in `raw` from the schemas in `infra/schema/`
 - Creates the `mart.f1_radio_enriched` view
 
-Verify:
-
-```bash
-bq ls raw # should list 5 tables
-bq ls mart # should list 1 view
-```
-
 ## 3. Deploy both Cloud Functions
 
 ```bash
@@ -58,13 +51,6 @@ bash deploy.sh
 cd ../f1-radio-analyzer
 cp .env.example .env # optional: tweak GEMINI_MODEL, FILE_LIMIT
 bash deploy.sh
-```
-
-Verify:
-
-```bash
-gcloud functions list --gen2 --regions=us-central1
-# Should show f1-radio-collector and f1-radio-analyzer with state: ACTIVE
 ```
 
 ## 4. Run the collector
@@ -99,37 +85,14 @@ Expect a JSON response within a few minutes:
 }
 ```
 
-Verify:
-
-```bash
-bq query --use_legacy_sql=false 'SELECT COUNT(*) AS n FROM raw.openf1_team_radios'
-bq query --use_legacy_sql=false 'SELECT COUNT(*) AS n FROM raw.openf1_meetings'
-gcloud storage ls "gs://$(gcloud config get-value project)-files/f1/" | head
-```
-
 > To iterate without redeploying, see [local-debug.md](docs/local-debug.md) instructions for running the functions locally.
 
 ## 5. Run the analyzer
 
-Reads pending audios (LEFT JOIN watermark), sends each MP3 to Vertex AI Gemini with enriched context, and writes the structured analysis to BigQuery.
+Reads pending audios, sends each MP3 to Vertex AI Gemini with enriched context, and writes the structured analysis to BigQuery.
 
 ```bash
 bash invoke.sh analyzer
-```
-
-Slower than the collector (1 Vertex call per audio). The function processes up to `FILE_LIMIT` (default 200) per execution — re-run to process the rest.
-
-Verify:
-
-```bash
-bq query --use_legacy_sql=false 'SELECT COUNT(*) AS n FROM raw.gemini_radio_analysis'
-
-bq query --use_legacy_sql=false '
-  SELECT driver_acronym, sentiment_label, topic, summary
-  FROM mart.f1_radio_enriched
-  WHERE sentiment_score IS NOT NULL
-  ORDER BY event_time DESC
-  LIMIT 5'
 ```
 
 > To iterate without redeploying, see [local-debug.md](docs/local-debug.md) instructions for running the functions locally.
