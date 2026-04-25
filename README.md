@@ -55,7 +55,7 @@ bash deploy.sh
 
 ## 4. Run the collector
 
-Downloads metadata for meetings/sessions/drivers, discovers new team radios from sessions, and uploads the MP3s to GCS.
+Downloads metadata for meetings/sessions/drivers, discovers new team radios, and uploads the MP3s to GCS.
 
 Prerequisites (one-time per shell):
 
