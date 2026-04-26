@@ -9,12 +9,6 @@
 
 Repository demonstrating how to use GCP to transcribe F1 team radio calls and extract sentiment from them.
 
-<div align="center">
-
-[![dashboard](./docs/dashboard.png)](https://brunofurtado.dev/en/projects/f1-team-radio)
-
-</div>
-
 > Team radio are sourced from the public [**OpenF1**](https://openf1.org) API, a community-maintained, Formula 1 data project.
 
 ---
