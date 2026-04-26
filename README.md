@@ -19,6 +19,18 @@ Repository demonstrating how to use GCP to transcribe F1 team radio calls and ex
 
 ---
 
+## Architecture
+
+<div align="center">
+
+![architecture](./docs/architecture.png)
+
+</div>
+
+> For a detailed walkthrough of how the pipeline works, see the article: [**Vertex AI for call sentiment analysis**](https://brunofurtado.dev/en/blog/vertex-ai-call-sentiment).
+
+---
+
 ## 1. Prerequisites
 
 - Google Cloud account with billing enabled
