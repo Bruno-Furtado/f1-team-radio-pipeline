@@ -11,7 +11,7 @@ Repository demonstrating how to use GCP to transcribe F1 team radio calls and ex
 
 <div align="center">
 
-![dashboard](./docs/dashboard.png)
+[![dashboard](./docs/dashboard.png)](https://brunofurtado.dev/en/projects/f1-team-radio)
 
 </div>
 
