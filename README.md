@@ -27,7 +27,7 @@ Repository demonstrating how to use GCP to transcribe F1 team radio calls and ex
 
 </div>
 
-> For a detailed walkthrough of how the pipeline works, see the article: [**Vertex AI for call sentiment analysis**](https://brunofurtado.dev/en/blog/vertex-ai-call-sentiment).
+> For a detailed walkthrough of how the pipeline works, see the article: <a href="https://brunofurtado.dev/en/blog/vertex-ai-call-sentiment" target="_blank" rel="noopener noreferrer">Vertex AI for call sentiment analysis</a>.
 
 ---
 
